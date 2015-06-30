@@ -1,0 +1,27 @@
+{
+  "name": "is-pointer-inside",
+  "description": "Check if pointer is inside the element",
+  "version": "0.0.0",
+  "keywords": [
+    "pointer",
+    "inside",
+    "element"
+  ],
+  "repository": "andrepolischuk/is-pointer-inside",
+  "dependencies": {
+    "global-offset": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel": "^5.5.6",
+    "mocha": "^2.2.5"
+  },
+  "main": "index.es5.js",
+  "scripts": {
+    "test": "mocha --require babel/register",
+    "transpile": "babel index.js > index.es5.js",
+    "prepublish": "npm run transpile",
+    "postpublish": "rm -rf *.es5.js"
+  },
+  "author": "Andrey Polischuk <andre.polischuk@gmail.com>",
+  "license": "MIT"
+}
