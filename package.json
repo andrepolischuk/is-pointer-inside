@@ -1,7 +1,7 @@
 {
   "name": "is-pointer-inside",
   "description": "Check if pointer is inside the element",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "pointer",
     "inside",
