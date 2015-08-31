@@ -19,9 +19,15 @@ document.addEventListener('mousemove', function(event) {
 }, false);
 ```
 
+## Related
+
+* [is-pointer-near][is-pointer-near] - Check if pointer is near the element
+
 ## License
 
 MIT
 
 [travis-url]: https://travis-ci.org/andrepolischuk/is-pointer-inside
 [travis-image]: https://travis-ci.org/andrepolischuk/is-pointer-inside.svg?branch=master
+
+[is-pointer-near]: https://github.com/andrepolischuk/is-pointer-near
