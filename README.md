@@ -11,13 +11,31 @@ npm install --save is-pointer-inside
 ## Usage
 
 ```js
-var isPointerInside = require('is-pointer-inside');
-var el = document.querySelector('.hello');
+import isPointerInside from 'is-pointer-inside';
 
-document.addEventListener('mousemove', function(event) {
+document.addEventListener('mousemove', event => {
+  const el = document.querySelector('.hello');
   isPointerInside(el, event); // true if pointer inside the el
 }, false);
 ```
+
+## API
+
+### isPointerInside(element, event)
+
+Return true if pointer inside the `element`.
+
+#### element
+
+Type: `element`
+
+DOM element.
+
+#### event
+
+Type: `object`
+
+Pointer event object with `pageX` and `pageY` props.
 
 ## Related
 

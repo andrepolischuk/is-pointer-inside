@@ -17,25 +17,25 @@ const children = {
   offsetParent: parent
 };
 
-test('should return true if inside the parent', t => {
+test('inside the parent', t => {
   const pointer = {pageX: 75, pageY: 75};
   t.true(isPointerInside(parent, pointer));
   t.false(isPointerInside(children, pointer));
 });
 
-test('should return true if inside the children', t => {
+test('inside the children', t => {
   const pointer = {pageX: 175, pageY: 175};
   t.false(isPointerInside(parent, pointer));
   t.true(isPointerInside(children, pointer));
 });
 
-test('should return true if inside the both', t => {
+test('inside the both', t => {
   const pointer = {pageX: 125, pageY: 125};
   t.true(isPointerInside(parent, pointer));
   t.true(isPointerInside(children, pointer));
 });
 
-test('should return false if outside', t => {
+test('outside', t => {
   const pointer = {pageX: 0, pageY: 0};
   t.false(isPointerInside(parent, pointer));
   t.false(isPointerInside(children, pointer));
