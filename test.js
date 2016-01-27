@@ -1,5 +1,5 @@
-import isPointerInside from './index';
-import assert from 'assert';
+import test from 'ava';
+import isPointerInside from './index.es5';
 
 const parent = {
   offsetLeft: 50,
@@ -17,26 +17,26 @@ const children = {
   offsetParent: parent
 };
 
-it('should return true if inside the parent', () => {
+test('should return true if inside the parent', t => {
   const pointer = {pageX: 75, pageY: 75};
-  assert(isPointerInside(parent, pointer) === true);
-  assert(isPointerInside(children, pointer) === false);
+  t.true(isPointerInside(parent, pointer));
+  t.false(isPointerInside(children, pointer));
 });
 
-it('should return true if inside the children', () => {
+test('should return true if inside the children', t => {
   const pointer = {pageX: 175, pageY: 175};
-  assert(isPointerInside(parent, pointer) === false);
-  assert(isPointerInside(children, pointer) === true);
+  t.false(isPointerInside(parent, pointer));
+  t.true(isPointerInside(children, pointer));
 });
 
-it('should return true if inside the both', () => {
+test('should return true if inside the both', t => {
   const pointer = {pageX: 125, pageY: 125};
-  assert(isPointerInside(parent, pointer) === true);
-  assert(isPointerInside(children, pointer) === true);
+  t.true(isPointerInside(parent, pointer));
+  t.true(isPointerInside(children, pointer));
 });
 
-it('should return false if outside', () => {
+test('should return false if outside', t => {
   const pointer = {pageX: 0, pageY: 0};
-  assert(isPointerInside(parent, pointer) === false);
-  assert(isPointerInside(children, pointer) === false);
+  t.false(isPointerInside(parent, pointer));
+  t.false(isPointerInside(children, pointer));
 });
