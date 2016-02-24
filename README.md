@@ -39,7 +39,9 @@ Pointer event object with `pageX` and `pageY` props.
 
 ## Related
 
-* [is-pointer-near][is-pointer-near] - Check if pointer is near the element
+* [coordinates][coordinates] — calculate relative coordinates
+* [global-offset][global-offset] — element global offset
+* [is-pointer-near][is-pointer-near] — check if pointer is near the element
 
 ## License
 
@@ -48,4 +50,6 @@ MIT
 [travis-url]: https://travis-ci.org/andrepolischuk/is-pointer-inside
 [travis-image]: https://travis-ci.org/andrepolischuk/is-pointer-inside.svg?branch=master
 
+[coordinates]: https://github.com/andrepolischuk/coordinates
+[global-offset]: https://github.com/andrepolischuk/global-offset
 [is-pointer-near]: https://github.com/andrepolischuk/is-pointer-near
