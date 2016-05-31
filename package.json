@@ -1,6 +1,6 @@
 {
   "name": "is-pointer-inside",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Check if pointer is inside the element",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
